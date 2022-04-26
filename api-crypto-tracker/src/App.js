@@ -26,7 +26,7 @@ function App() {
   );
   // console.log(filteredCoins);
   return (
-    <div className="App">
+    <div className="coin-app">
       <div className="coin-search">
         <h1 className="coin-text">Search a currency</h1>
         <form>
@@ -48,6 +48,8 @@ function App() {
             symbol={item.symbol}
             price={item.current_price}
             volumn={item.market_cap}
+            priceChange={item.price_change_percentage_24h}
+            marketCap={item.total_volume}
           />
         );
       })}
